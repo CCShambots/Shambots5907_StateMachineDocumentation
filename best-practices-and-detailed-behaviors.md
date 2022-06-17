@@ -27,12 +27,17 @@ Commands both in transitions and continuous commands should not have any require
 Flag states and normal states are mutually exclusive. The following rules apply when using them
 
 * Transitions cannot include start, end, or interruption states that are flag states
+* Flag states cannot include any state that is registered in a transition
 * Flag states cannot be parent states and vice versa
 * Flag states cannot have continual commands
 
 ### Canceling Transitions
 
 Primarily, canceling transitions can be accomplished by calling the `cancelTransition` method on a subsystem. This cancels any transition that is currently running and returns `true` or `false` based on whether a transition was actually canceled.
+
+### Continuous Commands
+
+A subsystem may only have one continuous command for any state.
 
 ## Best Practices
 

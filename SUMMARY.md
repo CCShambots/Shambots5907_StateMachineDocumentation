@@ -4,4 +4,5 @@
 * [Getting Started](getting-started.md)
 * [Syntax and Basic Functionality](syntax-and-basic-functionality.md)
 * [Best Practices and Detailed Behaviors](best-practices-and-detailed-behaviors.md)
+* [Subsystem Manager](subsystem-manager.md)
 * [Full Javadocs](full-javadocs.md)
