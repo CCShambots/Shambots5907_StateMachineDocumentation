@@ -45,5 +45,5 @@ A subsystem may only have one continuous command for any state.
 
 ### Don't Expose Methods
 
-Subsystem methods that cause changes to the subsystem state should be `private` wherever possible. This would include methods to, for example, lower an intake
+Subsystem methods that cause changes to the subsystem state should be `private` wherever possible. This would include methods to, for example, lower an intake. However, this may not always be possible for subsystems where you wish to write out commands in a different file. Exposing those methods is fine, just be careful to only use them through the state machine framework
 
