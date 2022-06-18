@@ -22,14 +22,16 @@ Your transitions cannot go to or from the undetermined state. However, the state
 
 Commands both in transitions and continuous commands should not have any requirements or should require only the subsystem for which you are registering them.
 
-### Flag States vs. Normal States
+### Flag States, Normal States, and Instance-Based States
 
-Flag states and normal states are mutually exclusive. The following rules apply when using them
+The following rules apply when using the three types of states
 
 * Transitions cannot include start, end, or interruption states that are flag states
 * Flag states cannot include any state that is registered in a transition
 * Flag states cannot be parent states and vice versa
-* Flag states cannot have continual commands
+* Flag states should not have continuous commands (they will never be run)
+* Instance-based states cannot have continuous commands
+* Instance-based states cannot be flag states
 
 ### Canceling Transitions
 

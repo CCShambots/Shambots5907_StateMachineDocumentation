@@ -75,11 +75,21 @@ Continuous commands will also be defined in the constructor with the following m
 
 {% code title="Turret.java constructor" %}
 ```java
-setContinuousCommand(ActiveTracking, new LimelightTrackingCommand());
+setContinuousCommand(Active, new LimelightTrackingCommand());
 ```
 {% endcode %}
 
 Here the first argument is the state during which the continuous command should run, and the second argument is the command to be run.
+
+## Instance-Based States
+
+Instance-Based states can be defined with the following method:
+
+{% code title="Turret.java constructor" %}
+```java
+addInstanceBasedState(Active);
+```
+{% endcode %}
 
 ## Defining Flag States
 
