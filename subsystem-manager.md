@@ -6,6 +6,10 @@ description: Easily Enable, Disable, and Determine Subsystems
 
 The `SubsystemManager` class is a singleton object meant to help with enabling, disabling, and determining the state of all subsystems in your codebase
 
+{% hint style="info" %}
+The Subsystem Manager is completely optional. Just note that any subsystem not added to the manager will not be sent over network tables by default, you will have to send the information yourself (if you'd like to). The primary advantage of _not_ adding a subsystem to the manager is that you can independently enable and disable it, which would be useful (i.e. for a subsystem that controls LEDs).
+{% endhint %}
+
 ### Adding Subsystems to the Subsystem Manager
 
 {% code title="RobotContainer.java " %}
